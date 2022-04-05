@@ -10,10 +10,12 @@ import SwiftUI
 struct DotsView: View {
   private let mode: CounterMode
   private let date: Date
+  private let onAppear: (CGFloat) -> Void
 
-  init(mode: CounterMode, date: Date) {
+  init(mode: CounterMode, date: Date, onAppear: @escaping (CGFloat) -> Void) {
     self.mode = mode
     self.date = date
+    self.onAppear = onAppear
   }
 
   var body: some View {
@@ -35,7 +37,10 @@ struct DotsView: View {
           }
         }
       }
-//      .frame(height: (circleBlockSize + spacing) * CGFloat(mode.getRowCount()))
+      .onAppear {
+        let dotsHeight = CGFloat(mode.getRowCount()) * (circleSize + spacing)
+        onAppear(dotsHeight)
+      }
     }
   }
 

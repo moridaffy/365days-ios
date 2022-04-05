@@ -122,6 +122,8 @@
 			dependencies = (
 			);
 			name = "three-six-five-days";
+			packageProductDependencies = (
+			);
 			productName = "three-six-five-days";
 			productReference = 0C2A468127FC982200E18E29 /* three-six-five-days.app */;
 			productType = "com.apple.product-type.application";
@@ -150,6 +152,8 @@
 				Base,
 			);
 			mainGroup = 0C2A467827FC982200E18E29;
+			packageReferences = (
+			);
 			productRefGroup = 0C2A468227FC982200E18E29 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

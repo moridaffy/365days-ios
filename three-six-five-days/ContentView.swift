@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  private enum Config {
+    static let counterPadding: CGFloat = 16.0
+  }
+
+  @State private var dotsHeight: CGFloat = 100.0
+
   private var date: Date {
     Date()
   }
@@ -15,9 +22,13 @@ struct ContentView: View {
   var body: some View {
     VStack {
       GeometryReader { geometry in
+        let viewWidth = geometry.size.width - Config.counterPadding * 2.0
+
         HStack {
-          DotsView(mode: .year, date: date)
-            .frame(width: geometry.size.width * 0.7)
+          DotsView(mode: .year, date: date) { dotsHeight in
+            self.dotsHeight = dotsHeight
+          }
+            .frame(width: viewWidth * 0.7)
 
           VStack {
             Text(date.year.string)
@@ -29,20 +40,14 @@ struct ContentView: View {
             Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
               .foregroundColor(.white)
           }
-          .frame(width: geometry.size.width * 0.3)
+          .frame(width: viewWidth * 0.3)
         }
-        .padding()
+        .padding(Config.counterPadding)
       }
       .background(Color.black)
       .cornerRadius(16.0)
+      .frame(height: dotsHeight + Config.counterPadding * 2.0)
       .padding()
     }
-    .background(Color.gray)
-  }
-}
-
-struct ContentView_Previews: PreviewProvider {
-  static var previews: some View {
-    ContentView()
   }
 }
