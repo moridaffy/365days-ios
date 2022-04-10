@@ -18,7 +18,7 @@ struct DotView: View {
 
   var body: some View {
     Rectangle()
-      .foregroundColor(.blue.opacity(state.opacity))
+      .foregroundColor(.customTurquoise.opacity(state.opacity))
       .frame(width: width, height: width)
       .cornerRadius(width / 2.0)
   }
@@ -37,7 +37,7 @@ extension DotView {
       case .current:
         return 1.0
       case .future:
-        return 0.15
+        return 0.1
       }
     }
   }
