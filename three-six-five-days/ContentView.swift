@@ -23,7 +23,9 @@ struct ContentView: View {
 
         HStack {
           DotsView(mode: mode, date: date) { dotsHeight in
-            self.dotsHeight = dotsHeight
+            withAnimation(nil) {
+              self.dotsHeight = dotsHeight
+            }
           }
             .frame(width: viewWidth * 0.7)
 
