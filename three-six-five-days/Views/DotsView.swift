@@ -31,7 +31,7 @@ struct DotsView: View {
             ForEach(0..<mode.getColumnCount(for: row + 1), id: \.self) { column in
               DotView(
                 width: circleSize,
-                state: getDotState(row: row, column: column)
+                state: getDotState(row: row + 1, column: column + 1)
               )
             }
           }
@@ -44,10 +44,10 @@ struct DotsView: View {
     }
   }
 
-  private func getDotState(row: Int, column: Int) -> DotView.State {
-    let day = Array(1..<row + 1)
+  private func getDotState(row: Int, column: Int) -> DotView.DotState {
+    let day = Array(1..<row)
       .compactMap { mode.getColumnCount(for: $0) }
-      .reduce(0, { $0 + $1 }) + column + 1
+      .reduce(0, { $0 + $1 }) + column
     let currentDay = date.dayInYear
 
     if currentDay > day {

@@ -9,9 +9,12 @@ import SwiftUI
 
 struct DotView: View {
   private let width: CGFloat
-  private let state: State
+  private let state: DotState
 
-  init(width: CGFloat, state: State) {
+  @State var isPulsating: Bool = false
+  @State var opacity: CGFloat = 1.0
+
+  init(width: CGFloat, state: DotState) {
     self.width = width
     self.state = state
   }
@@ -21,11 +24,18 @@ struct DotView: View {
       .foregroundColor(.customTurquoise.opacity(state.opacity))
       .frame(width: width, height: width)
       .cornerRadius(width / 2.0)
+      .opacity(opacity)
+      .animation(isPulsating ? Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true) : .default)
+      .onAppear {
+        guard state.isPulsating else { return }
+        self.isPulsating = true
+        self.opacity = 0.5
+      }
   }
 }
 
 extension DotView {
-  enum State {
+  enum DotState {
     case past
     case current
     case future
@@ -39,6 +49,10 @@ extension DotView {
       case .future:
         return 0.1
       }
+    }
+
+    var isPulsating: Bool {
+      self == .current
     }
   }
 }
