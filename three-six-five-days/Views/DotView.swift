@@ -27,7 +27,8 @@ struct DotView: View {
       .opacity(opacity)
       .animation(isPulsating ? Animation.easeInOut(duration: 1.0).repeatForever(autoreverses: true) : .default)
       .onAppear {
-        guard state.isPulsating else { return }
+        guard !isInWidget,
+              state.isPulsating else { return }
         self.isPulsating = true
         self.opacity = 0.5
       }

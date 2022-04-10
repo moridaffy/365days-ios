@@ -24,11 +24,11 @@ struct CounterView: View {
         .foregroundColor(.customPink)
 
       Text(date.yearCompletionPercentString)
-        .font(.system(size: 18.0, weight: .semibold))
+        .font(.system(size: 16.0, weight: .semibold))
         .foregroundColor(.customGreen)
 
       Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
-        .font(.system(size: 18.0, weight: .semibold))
+        .font(.system(size: 16.0, weight: .semibold))
         .foregroundColor(.customTurquoise)
     }
   }
