@@ -39,6 +39,25 @@ struct ContentView: View {
       .cornerRadius(16.0)
       .frame(height: dotsHeight + Config.counterPadding * 2.0)
       .padding()
+
+      VStack(spacing: 8.0) {
+        Text("Add 365days widget to your Today View or Home Screen")
+          .multilineTextAlignment(.center)
+          .foregroundColor(.white)
+          .font(.system(size: 14.0, weight: .regular))
+          .padding(.horizontal)
+          .padding(.top)
+
+        Link(destination: URL(string: "https://support.apple.com/en-gb/HT207122")!) {
+          Text("How?")
+            .foregroundColor(Color.customPink)
+            .font(.system(size: 14.0, weight: .semibold))
+        }
+        .padding(.horizontal)
+        .padding(.bottom)
+      }
+      .background(Color.customBackground)
+      .cornerRadius(16.0)
     }
   }
 }
