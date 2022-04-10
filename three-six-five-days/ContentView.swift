@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-  private enum Config {
-    static let counterPadding: CGFloat = 16.0
-  }
-
   @State private var dotsHeight: CGFloat = 100.0
 
   private let mode: CounterMode = .year
@@ -21,8 +17,9 @@ struct ContentView: View {
 
   var body: some View {
     VStack {
+      let counterPadding = 16.0
       GeometryReader { geometry in
-        let viewWidth = geometry.size.width - Config.counterPadding * 2.0
+        let viewWidth = geometry.size.width - counterPadding * 2.0
 
         HStack {
           DotsView(mode: mode, date: date) { dotsHeight in
@@ -33,11 +30,11 @@ struct ContentView: View {
           CounterView(mode: mode, date: date)
             .frame(width: viewWidth * 0.3)
         }
-        .padding(Config.counterPadding)
+        .padding(counterPadding)
       }
       .background(Color.customBackground)
       .cornerRadius(16.0)
-      .frame(height: dotsHeight + Config.counterPadding * 2.0)
+      .frame(height: dotsHeight + counterPadding * 2.0)
       .padding()
 
       VStack(spacing: 8.0) {
