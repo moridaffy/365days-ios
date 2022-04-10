@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C2A468127FC982200E18E29 /* three-six-five-days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "three-six-five-days.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C2A468127FC982200E18E29 /* 365days.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 365days.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C2A468427FC982200E18E29 /* three_six_five_daysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = three_six_five_daysApp.swift; sourceTree = "<group>"; };
 		0C2A468627FC982200E18E29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0C2A468827FC982300E18E29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +29,7 @@
 		0C2A469C27FCB65700E18E29 /* Int+Formatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Formatting.swift"; sourceTree = "<group>"; };
 		0C2A46A027FCBD4B00E18E29 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		0C2A46A327FCC09F00E18E29 /* CounterMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMode.swift; sourceTree = "<group>"; };
+		0C783323280340E0008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +54,7 @@
 		0C2A468227FC982200E18E29 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C2A468127FC982200E18E29 /* three-six-five-days.app */,
+				0C2A468127FC982200E18E29 /* 365days.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +62,7 @@
 		0C2A468327FC982200E18E29 /* three-six-five-days */ = {
 			isa = PBXGroup;
 			children = (
+				0C783323280340E0008DFF55 /* Info.plist */,
 				0C2A468427FC982200E18E29 /* three_six_five_daysApp.swift */,
 				0C2A468627FC982200E18E29 /* ContentView.swift */,
 				0C2A46A227FCC09500E18E29 /* Models */,
@@ -125,7 +127,7 @@
 			packageProductDependencies = (
 			);
 			productName = "three-six-five-days";
-			productReference = 0C2A468127FC982200E18E29 /* three-six-five-days.app */;
+			productReference = 0C2A468127FC982200E18E29 /* 365days.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -318,18 +320,21 @@
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "three-six-five-days/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = 365days;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.mskr.three-six-five-days";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 365days;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,18 +352,21 @@
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "three-six-five-days/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = 365days;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.mskr.three-six-five-days";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 365days;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
