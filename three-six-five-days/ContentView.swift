@@ -29,7 +29,7 @@ struct ContentView: View {
           }
             .frame(width: viewWidth * 0.7)
 
-          CounterView(mode: mode, date: date)
+          VerticalCounterView(mode: mode, date: date)
             .frame(width: viewWidth * 0.3)
         }
         .padding(counterPadding)

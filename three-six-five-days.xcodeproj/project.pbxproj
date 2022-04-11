@@ -17,7 +17,7 @@
 		0C2A46A127FCBD4B00E18E29 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A027FCBD4B00E18E29 /* DotView.swift */; };
 		0C2A46A427FCC09F00E18E29 /* CounterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A327FCC09F00E18E29 /* CounterMode.swift */; };
 		0C783325280346F9008DFF55 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C783324280346F9008DFF55 /* Color+CustomColors.swift */; };
-		0C78332728034776008DFF55 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* CounterView.swift */; };
+		0C78332728034776008DFF55 /* VerticalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* VerticalCounterView.swift */; };
 		0C78332F2803575A008DFF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C78332E2803575A008DFF55 /* WidgetKit.framework */; };
 		0C7833312803575A008DFF55 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C7833302803575A008DFF55 /* SwiftUI.framework */; };
 		0C7833342803575A008DFF55 /* three_six_five_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7833332803575A008DFF55 /* three_six_five_widget.swift */; };
@@ -26,7 +26,7 @@
 		0C78333A2803575B008DFF55 /* three_six_five_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 0C7833352803575A008DFF55 /* three_six_five_widget.intentdefinition */; };
 		0C78333D2803575B008DFF55 /* three-six-five-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0C78332C2803575A008DFF55 /* three-six-five-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0C78334228035886008DFF55 /* CounterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A327FCC09F00E18E29 /* CounterMode.swift */; };
-		0C7833432803588D008DFF55 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* CounterView.swift */; };
+		0C7833432803588D008DFF55 /* VerticalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* VerticalCounterView.swift */; };
 		0C78334428035890008DFF55 /* DotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A469727FCAF4300E18E29 /* DotsView.swift */; };
 		0C78334528035892008DFF55 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A027FCBD4B00E18E29 /* DotView.swift */; };
 		0C7833462803589D008DFF55 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C783324280346F9008DFF55 /* Color+CustomColors.swift */; };
@@ -34,6 +34,8 @@
 		0C783348280359A5008DFF55 /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A469A27FCAFF800E18E29 /* Date+Helpers.swift */; };
 		0C78334A28035CD6008DFF55 /* View+Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78334928035CD6008DFF55 /* View+Widget.swift */; };
 		0C78334B28035D1F008DFF55 /* View+Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78334928035CD6008DFF55 /* View+Widget.swift */; };
+		0CDBEC6228047E18002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
+		0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +75,7 @@
 		0C2A46A327FCC09F00E18E29 /* CounterMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMode.swift; sourceTree = "<group>"; };
 		0C783323280340E0008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0C783324280346F9008DFF55 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
-		0C78332628034776008DFF55 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		0C78332628034776008DFF55 /* VerticalCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCounterView.swift; sourceTree = "<group>"; };
 		0C78332C2803575A008DFF55 /* three-six-five-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "three-six-five-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C78332E2803575A008DFF55 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		0C7833302803575A008DFF55 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 		0C7833362803575B008DFF55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C7833382803575B008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C78334928035CD6008DFF55 /* View+Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Widget.swift"; sourceTree = "<group>"; };
+		0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +152,8 @@
 		0C2A469227FC987C00E18E29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0C78332628034776008DFF55 /* CounterView.swift */,
+				0C78332628034776008DFF55 /* VerticalCounterView.swift */,
+				0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */,
 				0C2A469727FCAF4300E18E29 /* DotsView.swift */,
 				0C2A46A027FCBD4B00E18E29 /* DotView.swift */,
 			);
@@ -303,6 +307,7 @@
 				0C2A469D27FCB65700E18E29 /* Int+Formatting.swift in Sources */,
 				0C2A46A127FCBD4B00E18E29 /* DotView.swift in Sources */,
 				0C78333A2803575B008DFF55 /* three_six_five_widget.intentdefinition in Sources */,
+				0CDBEC6228047E18002DBBD6 /* HorizontalCounterView.swift in Sources */,
 				0C783325280346F9008DFF55 /* Color+CustomColors.swift in Sources */,
 				0C2A468727FC982200E18E29 /* ContentView.swift in Sources */,
 				0C78334A28035CD6008DFF55 /* View+Widget.swift in Sources */,
@@ -310,7 +315,7 @@
 				0C2A469827FCAF4300E18E29 /* DotsView.swift in Sources */,
 				0C2A468527FC982200E18E29 /* three_six_five_daysApp.swift in Sources */,
 				0C2A469B27FCAFF800E18E29 /* Date+Helpers.swift in Sources */,
-				0C78332728034776008DFF55 /* CounterView.swift in Sources */,
+				0C78332728034776008DFF55 /* VerticalCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,9 +330,10 @@
 				0C78334428035890008DFF55 /* DotsView.swift in Sources */,
 				0C78334528035892008DFF55 /* DotView.swift in Sources */,
 				0C7833462803589D008DFF55 /* Color+CustomColors.swift in Sources */,
+				0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */,
 				0C7833342803575A008DFF55 /* three_six_five_widget.swift in Sources */,
 				0C78334228035886008DFF55 /* CounterMode.swift in Sources */,
-				0C7833432803588D008DFF55 /* CounterView.swift in Sources */,
+				0C7833432803588D008DFF55 /* VerticalCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

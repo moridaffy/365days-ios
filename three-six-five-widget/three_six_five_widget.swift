@@ -40,7 +40,9 @@ struct WidgetEntry: TimelineEntry {
   let date: Date
 }
 
-struct WidgetEntryView : View {
+// MARK: - Medium widget
+
+struct MediumWidgetView: View {
   @State private var dotsHeight: CGFloat = 100.0
 
   var entry: Provider.Entry
@@ -56,7 +58,7 @@ struct WidgetEntryView : View {
         }
           .frame(width: viewWidth * 0.7)
 
-        CounterView(mode: entry.mode, date: entry.date)
+        VerticalCounterView(mode: entry.mode, date: entry.date)
           .frame(width: viewWidth * 0.3)
       }
       .padding(counterPadding)
@@ -65,13 +67,12 @@ struct WidgetEntryView : View {
   }
 }
 
-@main
-struct three_six_five_widget: Widget {
-  let kind: String = "three_six_five_widget"
+struct MediumWidget: Widget {
+  let kind: String = "medium_widget"
 
   var body: some WidgetConfiguration {
     IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-      WidgetEntryView(entry: entry)
+      MediumWidgetView(entry: entry)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.customBackground)
     }
@@ -81,9 +82,44 @@ struct three_six_five_widget: Widget {
   }
 }
 
-struct three_six_five_widget_Previews: PreviewProvider {
-  static var previews: some View {
-    WidgetEntryView(entry: WidgetEntry(mode: .year, date: Date()))
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
+// MARK: - Small widget
+
+struct SmallWidgetView: View {
+  @State private var dotsHeight: CGFloat = 100.0
+
+  var entry: Provider.Entry
+
+  var body: some View {
+    VStack {
+      DotsView(mode: entry.mode, date: entry.date) { dotsHeight in
+        self.dotsHeight = dotsHeight
+      }
+
+      VerticalCounterView(mode: entry.mode, date: entry.date)
+    }
+    .padding()
   }
+}
+
+struct SmallWidget: Widget {
+  let kind: String = "small_widget"
+
+  var body: some WidgetConfiguration {
+    IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+      SmallWidgetView(entry: entry)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.customBackground)
+    }
+    .supportedFamilies([.systemSmall])
+    .configurationDisplayName("365days")
+    .description("Track year progress")
+  }
+}
+
+@main
+struct CardioBotWidgets: WidgetBundle {
+    var body: some Widget {
+        MediumWidget()
+        SmallWidget()
+    }
 }

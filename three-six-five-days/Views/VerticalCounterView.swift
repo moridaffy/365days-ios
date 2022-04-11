@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CounterView: View {
-  // TODO: adapt CounterView to work with different modes
+struct VerticalCounterView: View {
+  // TODO: adapt VerticalCounterView to work with different modes
   private let mode: CounterMode
   private let date: Date
 
