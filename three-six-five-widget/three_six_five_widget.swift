@@ -49,11 +49,12 @@ struct MediumWidgetView: View {
 
   var body: some View {
     let counterPadding = 16.0
+
     GeometryReader { geometry in
       let viewWidth = geometry.size.width - counterPadding * 2.0
 
       HStack {
-        DotsView(mode: entry.mode, date: entry.date) { dotsHeight in
+        DotsView(mode: entry.mode, date: entry.date, smallerDots: true) { dotsHeight in
           self.dotsHeight = dotsHeight
         }
           .frame(width: viewWidth * 0.7)
@@ -90,14 +91,16 @@ struct SmallWidgetView: View {
   var entry: Provider.Entry
 
   var body: some View {
+    let counterPadding = 16.0
+
     VStack {
-      DotsView(mode: entry.mode, date: entry.date) { dotsHeight in
+      DotsView(mode: entry.mode, date: entry.date, smallerDots: false) { dotsHeight in
         self.dotsHeight = dotsHeight
       }
 
-      VerticalCounterView(mode: entry.mode, date: entry.date)
+      HorizontalCounterView(mode: entry.mode, date: entry.date)
     }
-    .padding()
+    .padding(counterPadding)
   }
 }
 

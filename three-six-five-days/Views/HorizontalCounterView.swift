@@ -18,18 +18,23 @@ struct HorizontalCounterView: View {
   }
 
   var body: some View {
-    HStack {
-      Text(date.yearCompletionPercentString)
-        .font(.system(size: 16.0, weight: .semibold))
-        .foregroundColor(.customGreen)
-
+    VStack(spacing: 2.0) {
       Text(date.year.string)
         .font(.system(size: 20.0, weight: .bold))
         .foregroundColor(.customPink)
+        .frame(maxWidth: .infinity)
 
-      Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
-        .font(.system(size: 16.0, weight: .semibold))
-        .foregroundColor(.customTurquoise)
+      HStack(spacing: 0.0) {
+        Text(date.yearCompletionPercentString)
+          .font(.system(size: 12.0, weight: .semibold))
+          .foregroundColor(.customGreen)
+          .frame(maxWidth: .infinity)
+
+        Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
+          .font(.system(size: 12.0, weight: .semibold))
+          .foregroundColor(.customTurquoise)
+          .frame(maxWidth: .infinity)
+      }
     }
   }
 }

@@ -17,20 +17,28 @@ enum CounterMode {
     }
   }
 
-  func getRowCount() -> Int {
+  func getRowCount(smallerDots: Bool) -> Int {
     switch self {
     case .year:
-      return 12
+      return smallerDots ? 12 : 15
     }
   }
 
-  func getColumnCount(for row: Int) -> Int {
+  func getColumnCount(for row: Int, smallerDots: Bool) -> Int {
     switch self {
     case .year:
-      if row != getRowCount() {
-        return row % 2 == 0 ? 30 : 31
+      if smallerDots {
+        if row != getRowCount(smallerDots: smallerDots) {
+          return row % 2 == 0 ? 30 : 31
+        } else {
+          return totalDots == 366 ? 30 : 29
+        }
       } else {
-        return totalDots == 366 ? 30 : 29
+        if row != getRowCount(smallerDots: smallerDots) {
+          return row % 3 == 0 ? 25 : 24
+        } else {
+          return totalDots == 366 ? 26 : 25
+        }
       }
     }
   }

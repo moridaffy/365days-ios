@@ -22,7 +22,7 @@ struct ContentView: View {
         let viewWidth = geometry.size.width - counterPadding * 2.0
 
         HStack {
-          DotsView(mode: mode, date: date) { dotsHeight in
+          DotsView(mode: mode, date: date, smallerDots: false) { dotsHeight in
             withAnimation(nil) {
               self.dotsHeight = dotsHeight
             }
