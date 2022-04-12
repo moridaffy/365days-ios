@@ -19,11 +19,6 @@ struct HorizontalCounterView: View {
 
   var body: some View {
     VStack(spacing: 2.0) {
-      Text(date.year.string)
-        .font(.system(size: 20.0, weight: .bold))
-        .foregroundColor(.customPink)
-        .frame(maxWidth: .infinity)
-
       HStack(spacing: 0.0) {
         Text(date.yearCompletionPercentString)
           .font(.system(size: 12.0, weight: .semibold))
@@ -35,6 +30,11 @@ struct HorizontalCounterView: View {
           .foregroundColor(.customTurquoise)
           .frame(maxWidth: .infinity)
       }
+
+      Text(date.year.string)
+        .font(.system(size: 20.0, weight: .bold))
+        .foregroundColor(.customPink)
+        .frame(maxWidth: .infinity)
     }
   }
 }
