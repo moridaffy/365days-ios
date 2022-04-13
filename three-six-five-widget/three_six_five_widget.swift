@@ -20,15 +20,14 @@ struct Provider: IntentTimelineProvider {
   }
 
   func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-    var entries: [WidgetEntry] = []
 
     // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-    let currentDate = Date()
-    for dayOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .day, value: dayOffset, to: currentDate)!
-      let entry = WidgetEntry(mode: .year, date: entryDate)
-      entries.append(entry)
-    }
+    let calendar = Calendar.current
+    let currentDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: Date()) ?? Date()
+    let secondsPerDay = 60.0 * 60.0 * 24.0
+
+    let entries: [WidgetEntry] = Array(0...5)
+      .compactMap { WidgetEntry(mode: .year, date: currentDate.addingTimeInterval(secondsPerDay * Double($0))) }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
     completion(timeline)
@@ -57,7 +56,7 @@ struct MediumWidgetView: View {
         DotsView(mode: entry.mode, date: entry.date, smallerDots: true) { dotsHeight in
           self.dotsHeight = dotsHeight
         }
-          .frame(width: viewWidth * 0.7)
+        .frame(width: viewWidth * 0.7)
 
         VerticalCounterView(mode: entry.mode, date: entry.date)
           .frame(width: viewWidth * 0.3)
@@ -121,8 +120,8 @@ struct SmallWidget: Widget {
 
 @main
 struct CardioBotWidgets: WidgetBundle {
-    var body: some Widget {
-        MediumWidget()
-        SmallWidget()
-    }
+  var body: some Widget {
+    MediumWidget()
+    SmallWidget()
+  }
 }

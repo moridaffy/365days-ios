@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
   @State private var dotsHeight: CGFloat = 100.0
@@ -57,6 +58,9 @@ struct ContentView: View {
       }
       .background(Color.customBackground)
       .cornerRadius(16.0)
+    }
+    .onAppear {
+      WidgetCenter.shared.reloadAllTimelines()
     }
   }
 }
