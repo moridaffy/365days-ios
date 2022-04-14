@@ -9,12 +9,12 @@ import SwiftUI
 import WidgetKit
 
 struct ContentView: View {
+  @Environment(\.scenePhase) var scenePhase
+
   @State private var dotsHeight: CGFloat = 100.0
+  @State private var date: Date = Date()
 
   private let mode: CounterMode = .year
-  private var date: Date {
-    Date()
-  }
 
   var body: some View {
     VStack {
@@ -59,7 +59,10 @@ struct ContentView: View {
       .background(Color.customBackground)
       .cornerRadius(16.0)
     }
-    .onAppear {
+    .onChange(of: scenePhase) { phase in
+      guard phase == .active else { return }
+
+      self.date = Date()
       WidgetCenter.shared.reloadAllTimelines()
     }
   }
