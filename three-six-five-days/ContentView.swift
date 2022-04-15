@@ -14,6 +14,11 @@ struct ContentView: View {
   @State private var dotsHeight: CGFloat = 100.0
   @State private var date: Date = Date()
 
+  @State private var displaySettings: Bool = false
+
+  private let cornerRadius: CGFloat = 16.0
+  private let fontSize: CGFloat = 14.0
+
   private let mode: CounterMode = .year
 
   var body: some View {
@@ -44,20 +49,35 @@ struct ContentView: View {
         Text("Add 365days widget to your Today View or Home Screen")
           .multilineTextAlignment(.center)
           .foregroundColor(.white)
-          .font(.system(size: 14.0, weight: .regular))
+          .font(.system(size: fontSize, weight: .regular))
           .padding(.horizontal)
           .padding(.top)
 
         Link(destination: URL(string: "https://support.apple.com/en-gb/HT207122")!) {
           Text("How?")
-            .foregroundColor(Color.customPink)
-            .font(.system(size: 14.0, weight: .semibold))
+            .foregroundColor(.customPink)
+            .font(.system(size: fontSize, weight: .semibold))
         }
         .padding(.horizontal)
         .padding(.bottom)
       }
       .background(Color.customBackground)
-      .cornerRadius(16.0)
+      .cornerRadius(cornerRadius)
+
+      HStack {
+        Button(action: {
+          self.displaySettings = true
+        }, label: {
+          Text("Settings")
+            .font(.system(size: fontSize, weight: .regular))
+            .foregroundColor(.white)
+            .padding(.horizontal)
+        })
+        .frame(height: cornerRadius * 2.0)
+        .background(Color.customBackground)
+        .cornerRadius(cornerRadius)
+      }
+      .padding()
     }
     .onChange(of: scenePhase) { phase in
       guard phase == .active else { return }
