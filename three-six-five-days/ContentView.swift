@@ -85,5 +85,11 @@ struct ContentView: View {
       self.date = Date()
       WidgetCenter.shared.reloadAllTimelines()
     }
+    .sheet(isPresented: $displaySettings) {
+      NavigationView {
+        SettingsView()
+          .navigationTitle("Settings")
+      }
+    }
   }
 }
