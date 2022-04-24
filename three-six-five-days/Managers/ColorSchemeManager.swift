@@ -16,7 +16,6 @@ class ColorSchemeManager {
     }
     set {
       SettingsManager.shared.setValue(newValue.rawValue, forKey: .colorScheme)
-      NotificationCenter.default.post(name: .colorSchemeChanged, object: nil)
       WidgetCenter.shared.reloadAllTimelines()
     }
   }

@@ -21,11 +21,9 @@
 		0C2A46A127FCBD4B00E18E29 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A027FCBD4B00E18E29 /* DotView.swift */; };
 		0C2A46A427FCC09F00E18E29 /* CounterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A327FCC09F00E18E29 /* CounterMode.swift */; };
 		0C6018DE2815DE87009AB28A /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */; };
-		0C6018E02815DEDE009AB28A /* Notification.Name+CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */; };
 		0C6018E12815DFE7009AB28A /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */; };
 		0C6018E22815DFEA009AB28A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B19C52811E86300300A18 /* SettingsManager.swift */; };
 		0C6018E32815E00D009AB28A /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B19C02811E4EA00300A18 /* ColorScheme.swift */; };
-		0C6018E42815E06E009AB28A /* Notification.Name+CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */; };
 		0C783325280346F9008DFF55 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C783324280346F9008DFF55 /* Color+CustomColors.swift */; };
 		0C78332728034776008DFF55 /* VerticalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* VerticalCounterView.swift */; };
 		0C78332F2803575A008DFF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C78332E2803575A008DFF55 /* WidgetKit.framework */; };
@@ -88,7 +86,6 @@
 		0C2A46A027FCBD4B00E18E29 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 		0C2A46A327FCC09F00E18E29 /* CounterMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMode.swift; sourceTree = "<group>"; };
 		0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeManager.swift; sourceTree = "<group>"; };
-		0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+CustomNotifications.swift"; sourceTree = "<group>"; };
 		0C6018E52815E10B009AB28A /* three-six-five-days.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "three-six-five-days.entitlements"; sourceTree = "<group>"; };
 		0C6018E62815E126009AB28A /* three-six-five-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "three-six-five-widgetExtension.entitlements"; sourceTree = "<group>"; };
 		0C783323280340E0008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -199,7 +196,6 @@
 				0C78334928035CD6008DFF55 /* View+Widget.swift */,
 				0C2A469C27FCB65700E18E29 /* Int+Formatting.swift */,
 				0C783324280346F9008DFF55 /* Color+CustomColors.swift */,
-				0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -348,7 +344,6 @@
 				0C2A468727FC982200E18E29 /* ContentView.swift in Sources */,
 				0C78334A28035CD6008DFF55 /* View+Widget.swift in Sources */,
 				0C2A46A427FCC09F00E18E29 /* CounterMode.swift in Sources */,
-				0C6018E02815DEDE009AB28A /* Notification.Name+CustomNotifications.swift in Sources */,
 				0C2A469827FCAF4300E18E29 /* DotsView.swift in Sources */,
 				0C1B19C32811E5DA00300A18 /* ColorSchemeView.swift in Sources */,
 				0C2A468527FC982200E18E29 /* three_six_five_daysApp.swift in Sources */,
@@ -364,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C78334B28035D1F008DFF55 /* View+Widget.swift in Sources */,
-				0C6018E42815E06E009AB28A /* Notification.Name+CustomNotifications.swift in Sources */,
 				0C6018E22815DFEA009AB28A /* SettingsManager.swift in Sources */,
 				0C783347280359A1008DFF55 /* Int+Formatting.swift in Sources */,
 				0C783348280359A5008DFF55 /* Date+Helpers.swift in Sources */,

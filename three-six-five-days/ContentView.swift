@@ -82,14 +82,21 @@ struct ContentView: View {
     .onChange(of: scenePhase) { phase in
       guard phase == .active else { return }
 
-      self.date = Date()
-      WidgetCenter.shared.reloadAllTimelines()
+      reloadView()
     }
     .sheet(isPresented: $displaySettings) {
       NavigationView {
         SettingsView()
           .navigationTitle("Settings")
       }
+      .onDisappear {
+        self.reloadView()
+      }
     }
+  }
+
+  private func reloadView() {
+    self.date = Date()
+    WidgetCenter.shared.reloadAllTimelines()
   }
 }
