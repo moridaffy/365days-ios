@@ -64,20 +64,20 @@ struct ContentView: View {
       .background(Color.customBackground)
       .cornerRadius(cornerRadius)
 
-      HStack {
-        Button(action: {
-          self.displaySettings = true
-        }, label: {
-          Text("Settings")
-            .font(.system(size: fontSize, weight: .regular))
-            .foregroundColor(.white)
-            .padding(.horizontal)
-        })
-        .frame(height: cornerRadius * 2.0)
-        .background(Color.customBackground)
-        .cornerRadius(cornerRadius)
-      }
-      .padding()
+//      HStack {
+//        Button(action: {
+//          self.displaySettings = true
+//        }, label: {
+//          Text("Settings")
+//            .font(.system(size: fontSize, weight: .regular))
+//            .foregroundColor(.white)
+//            .padding(.horizontal)
+//        })
+//        .frame(height: cornerRadius * 2.0)
+//        .background(Color.customBackground)
+//        .cornerRadius(cornerRadius)
+//      }
+//      .padding()
     }
     .onChange(of: scenePhase) { phase in
       guard phase == .active else { return }
