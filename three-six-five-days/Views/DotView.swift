@@ -11,6 +11,8 @@ struct DotView: View {
   private let width: CGFloat
   private let state: DotState
 
+  private let colorScheme = ColorSchemeManager.shared.colorScheme
+
   @State var isPulsating: Bool = false
   @State var opacity: CGFloat = 1.0
 
@@ -21,7 +23,7 @@ struct DotView: View {
 
   var body: some View {
     Rectangle()
-      .foregroundColor(.customTurquoise.opacity(state.opacity))
+      .foregroundColor(colorScheme.dayColor.opacity(state.opacity))
       .frame(width: width, height: width)
       .cornerRadius(width / 2.0)
       .opacity(opacity)

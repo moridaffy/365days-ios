@@ -22,6 +22,10 @@
 		0C2A46A427FCC09F00E18E29 /* CounterMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A46A327FCC09F00E18E29 /* CounterMode.swift */; };
 		0C6018DE2815DE87009AB28A /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */; };
 		0C6018E02815DEDE009AB28A /* Notification.Name+CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */; };
+		0C6018E12815DFE7009AB28A /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */; };
+		0C6018E22815DFEA009AB28A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B19C52811E86300300A18 /* SettingsManager.swift */; };
+		0C6018E32815E00D009AB28A /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1B19C02811E4EA00300A18 /* ColorScheme.swift */; };
+		0C6018E42815E06E009AB28A /* Notification.Name+CustomNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */; };
 		0C783325280346F9008DFF55 /* Color+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C783324280346F9008DFF55 /* Color+CustomColors.swift */; };
 		0C78332728034776008DFF55 /* VerticalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78332628034776008DFF55 /* VerticalCounterView.swift */; };
 		0C78332F2803575A008DFF55 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C78332E2803575A008DFF55 /* WidgetKit.framework */; };
@@ -356,13 +360,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C78334B28035D1F008DFF55 /* View+Widget.swift in Sources */,
+				0C6018E42815E06E009AB28A /* Notification.Name+CustomNotifications.swift in Sources */,
+				0C6018E22815DFEA009AB28A /* SettingsManager.swift in Sources */,
 				0C783347280359A1008DFF55 /* Int+Formatting.swift in Sources */,
 				0C783348280359A5008DFF55 /* Date+Helpers.swift in Sources */,
 				0C7833392803575B008DFF55 /* three_six_five_widget.intentdefinition in Sources */,
 				0C78334428035890008DFF55 /* DotsView.swift in Sources */,
 				0C78334528035892008DFF55 /* DotView.swift in Sources */,
+				0C6018E12815DFE7009AB28A /* ColorSchemeManager.swift in Sources */,
 				0C7833462803589D008DFF55 /* Color+CustomColors.swift in Sources */,
 				0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */,
+				0C6018E32815E00D009AB28A /* ColorScheme.swift in Sources */,
 				0C7833342803575A008DFF55 /* three_six_five_widget.swift in Sources */,
 				0C78334228035886008DFF55 /* CounterMode.swift in Sources */,
 				0C7833432803588D008DFF55 /* VerticalCounterView.swift in Sources */,

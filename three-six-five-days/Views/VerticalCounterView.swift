@@ -12,6 +12,8 @@ struct VerticalCounterView: View {
   private let mode: CounterMode
   private let date: Date
 
+  private let colorScheme = ColorSchemeManager.shared.colorScheme
+
   init(mode: CounterMode, date: Date) {
     self.mode = mode
     self.date = date
@@ -21,15 +23,15 @@ struct VerticalCounterView: View {
     VStack {
       Text(date.year.string)
         .font(.system(size: 20.0, weight: .bold))
-        .foregroundColor(.customPink)
+        .foregroundColor(colorScheme.accentColor)
 
       Text(date.yearCompletionPercentString)
         .font(.system(size: 16.0, weight: .semibold))
-        .foregroundColor(.customGreen)
+        .foregroundColor(colorScheme.percentColor)
 
       Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
         .font(.system(size: 16.0, weight: .semibold))
-        .foregroundColor(.customTurquoise)
+        .foregroundColor(colorScheme.dayColor)
     }
   }
 }
