@@ -7,8 +7,8 @@
 
 import Foundation
 
-class SettingsHelper {
-  static let shared = SettingsHelper()
+class SettingsManager {
+  static let shared = SettingsManager()
 
   private let defaults = UserDefaults.standard
 
@@ -27,7 +27,7 @@ class SettingsHelper {
   }
 }
 
-extension SettingsHelper {
+extension SettingsManager {
   enum Keys: String {
     case colorScheme
 

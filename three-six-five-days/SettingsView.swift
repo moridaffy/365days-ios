@@ -12,8 +12,7 @@ struct SettingsView: View {
   @State private var selectedColorScheme: ColorScheme
 
   init() {
-    let colorSchemeKey = SettingsHelper.shared.getValue(of: String.self, forKey: .colorScheme) ?? ""
-    selectedColorScheme = ColorScheme(rawValue: colorSchemeKey) ?? .standard
+    selectedColorScheme = ColorSchemeManager.shared.colorScheme
   }
   
   var body: some View {
@@ -31,10 +30,16 @@ struct SettingsView: View {
 
         ColorSchemeView(scheme: scheme, isSelected: scheme == selectedColorScheme)
           .onTapGesture {
-            guard selectedColorScheme != scheme else { return }
-            selectedColorScheme = scheme
+            didSelectColorScheme(scheme)
           }
       }
     }
+  }
+
+  private func didSelectColorScheme(_ scheme: ColorScheme) {
+    guard selectedColorScheme != scheme else { return }
+
+    selectedColorScheme = scheme
+    ColorSchemeManager.shared.colorScheme = scheme
   }
 }
