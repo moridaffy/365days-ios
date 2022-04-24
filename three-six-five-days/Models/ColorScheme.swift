@@ -12,6 +12,7 @@ enum ColorScheme: String, CaseIterable {
   case herbal
   case pinky
   case ocean
+  case fancy
 
   var title: String {
     switch self {
@@ -23,6 +24,8 @@ enum ColorScheme: String, CaseIterable {
       return "Pinky"
     case .ocean:
       return "Ocean"
+    case .fancy:
+      return "Fancy"
     }
   }
 
@@ -31,7 +34,7 @@ enum ColorScheme: String, CaseIterable {
     case .standard:
       return .customTurquoise
     default:
-      return .white
+      return Color("\(title)Day")
     }
   }
 
@@ -40,7 +43,7 @@ enum ColorScheme: String, CaseIterable {
     case .standard:
       return .customGreen
     default:
-      return .white
+      return Color("\(title)Percent")
     }
   }
 
@@ -49,7 +52,7 @@ enum ColorScheme: String, CaseIterable {
     case .standard:
       return .customPink
     default:
-      return .white
+      return Color("\(title)Accent")
     }
   }
 }
