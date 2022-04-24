@@ -508,7 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "three-six-five-days/three-six-five-days.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"three-six-five-days/Preview Content\"";
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				ENABLE_PREVIEWS = YES;
@@ -542,7 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "three-six-five-days/three-six-five-days.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"three-six-five-days/Preview Content\"";
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				ENABLE_PREVIEWS = YES;
@@ -575,7 +575,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "three-six-five-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "three-six-five-widget/Info.plist";
@@ -604,7 +604,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = "three-six-five-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "three-six-five-widget/Info.plist";
