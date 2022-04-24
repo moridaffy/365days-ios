@@ -89,6 +89,8 @@
 		0C2A46A327FCC09F00E18E29 /* CounterMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterMode.swift; sourceTree = "<group>"; };
 		0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeManager.swift; sourceTree = "<group>"; };
 		0C6018DF2815DEDE009AB28A /* Notification.Name+CustomNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+CustomNotifications.swift"; sourceTree = "<group>"; };
+		0C6018E52815E10B009AB28A /* three-six-five-days.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "three-six-five-days.entitlements"; sourceTree = "<group>"; };
+		0C6018E62815E126009AB28A /* three-six-five-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "three-six-five-widgetExtension.entitlements"; sourceTree = "<group>"; };
 		0C783323280340E0008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0C783324280346F9008DFF55 /* Color+CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+CustomColors.swift"; sourceTree = "<group>"; };
 		0C78332628034776008DFF55 /* VerticalCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCounterView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		0C2A467827FC982200E18E29 = {
 			isa = PBXGroup;
 			children = (
+				0C6018E62815E126009AB28A /* three-six-five-widgetExtension.entitlements */,
 				0C2A468327FC982200E18E29 /* three-six-five-days */,
 				0C7833322803575A008DFF55 /* three-six-five-widget */,
 				0C78332D2803575A008DFF55 /* Frameworks */,
@@ -154,6 +157,7 @@
 		0C2A468327FC982200E18E29 /* three-six-five-days */ = {
 			isa = PBXGroup;
 			children = (
+				0C6018E52815E10B009AB28A /* three-six-five-days.entitlements */,
 				0C783323280340E0008DFF55 /* Info.plist */,
 				0C2A468427FC982200E18E29 /* three_six_five_daysApp.swift */,
 				0C2A468627FC982200E18E29 /* ContentView.swift */,
@@ -508,6 +512,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "three-six-five-days/three-six-five-days.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"three-six-five-days/Preview Content\"";
@@ -541,6 +546,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "three-six-five-days/three-six-five-days.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"three-six-five-days/Preview Content\"";
@@ -573,6 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "three-six-five-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;
@@ -601,6 +608,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "three-six-five-widgetExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = GCD2MCUEP4;

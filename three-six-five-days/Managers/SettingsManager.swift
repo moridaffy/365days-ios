@@ -10,12 +10,13 @@ import Foundation
 class SettingsManager {
   static let shared = SettingsManager()
 
-  private let defaults = UserDefaults.standard
+  private let defaults = UserDefaults(suiteName: "group.ru.mskr.thee-six-five")!
 
   private init() { }
 
   func setValue(_ value: Any?, forKey key: Keys) {
     defaults.set(value, forKey: key.key)
+    defaults.synchronize()
   }
 
   func getValue<T>(of type: T.Type, forKey key: Keys) -> T? {
@@ -24,6 +25,7 @@ class SettingsManager {
 
   func deleteValue(forKey key: Keys) {
     defaults.removeObject(forKey: key.key)
+    defaults.synchronize()
   }
 }
 
@@ -33,7 +35,6 @@ extension SettingsManager {
 
     var key: String {
       return [
-        Bundle.main.bundleIdentifier ?? "ru.mskr.three-six-five-days",
         rawValue
       ]
         .joined(separator: ".")

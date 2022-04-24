@@ -119,7 +119,7 @@ struct SmallWidget: Widget {
 }
 
 @main
-struct CardioBotWidgets: WidgetBundle {
+struct TheeSixFiveWidgets: WidgetBundle {
   var body: some Widget {
     MediumWidget()
     SmallWidget()
