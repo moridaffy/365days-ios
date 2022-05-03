@@ -24,7 +24,7 @@
 * Nice widget is included
 * Built with SwiftUI
 
-## How to use
+## How to build
 - Clone repo and open Xcode project
 - Update signing settings and make sure AppGroups entitlement is configured properly so main app can share data with widget
 - Update `suiteName` in `SettingsManager.swift` to match with your AppGroup
@@ -37,5 +37,3 @@
 
 ## Developer
 This app was created by Maxim Skryabin as a simple pet project and a way to practice SwiftUI skills. You can download it for free from App Store or build it by yourself and customize. Feel free to contact me using <a href="https://mxm.codes/contact-en/">my website</a>.
-
-Icons used in this package are from <a href="https://www.iconfinder.com/search?q=&iconset=eon-social-media-contact-info-2">Eon - Social Media & Contact Info icons pack</a>
