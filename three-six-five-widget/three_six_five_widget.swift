@@ -26,7 +26,7 @@ struct Provider: IntentTimelineProvider {
     let currentDate = calendar.date(bySettingHour: 0, minute: 0, second: 0, of: Date()) ?? Date()
     let secondsPerDay = 60.0 * 60.0 * 24.0
 
-    let entries: [WidgetEntry] = Array(0...5)
+    let entries: [WidgetEntry] = Array(0...30)
       .compactMap { WidgetEntry(mode: .year, date: currentDate.addingTimeInterval(secondsPerDay * Double($0))) }
 
     let timeline = Timeline(entries: entries, policy: .atEnd)
