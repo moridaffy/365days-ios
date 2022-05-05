@@ -16,10 +16,13 @@ struct SettingsView: View {
   }
   
   var body: some View {
-    VStack(spacing: .zero) {
+    // TODO: find a better way to change List's background color
+    UITableView.appearance().backgroundColor = .clear
+
+    return VStack(spacing: .zero) {
       HStack {
         Text("Select color scheme")
-          .foregroundColor(.white)
+          .foregroundColor(.primary)
           .font(.system(size: 17.0, weight: .semibold))
         Spacer()
       }
