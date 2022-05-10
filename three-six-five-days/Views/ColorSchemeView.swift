@@ -50,7 +50,7 @@ struct ColorSchemeView: View {
 
       Image(systemName: "checkmark")
         .renderingMode(.template)
-        .colorMultiply(.customPink)
+        .foregroundColor(.customPink)
         .opacity(isSelected ? 1.0 : 0.0)
     }
     .padding(.vertical, 4.0)
