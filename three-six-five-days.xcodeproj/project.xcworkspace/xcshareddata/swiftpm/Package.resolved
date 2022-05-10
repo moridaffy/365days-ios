@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "devcred-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/moridaffy/devcred-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "dbdbe087ab78ab64e6166b54f07e49038c83faf4"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "59eb199fdb8dd47733624e8b0277822d0232579e",
+        "version" : "7.2.2"
+      }
+    }
+  ],
+  "version" : 2
+}

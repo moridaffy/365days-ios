@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+import DevCred
+
 struct SettingsView: View {
 
   @State private var selectedColorScheme: ColorScheme
+
+  @State private var devCredPresented = false
 
   init() {
     selectedColorScheme = ColorSchemeManager.shared.colorScheme
@@ -37,6 +41,25 @@ struct SettingsView: View {
           }
       }
     }
+    .toolbar {
+      ToolbarItem(placement: .navigationBarTrailing) {
+        Button {
+          devCredPresented = true
+        } label: {
+          Image(systemName: "person.crop.circle.badge.questionmark")
+            .renderingMode(.template)
+            .foregroundColor(selectedColorScheme.accentColor)
+        }
+      }
+    }
+    .sheet(isPresented: $devCredPresented) {
+      DevCredRepresentable(config: .init(
+        infoSource: .remote(url: "https://mxm.codes/devcred.json"),
+        excludedBundleId: ConstantHelper.bundleId,
+        presentationType: .modal,
+        accentColor: selectedColorScheme.accentColor.uiColor
+      ))
+    }
   }
 
   private func didSelectColorScheme(_ scheme: ColorScheme) {
@@ -45,4 +68,27 @@ struct SettingsView: View {
     selectedColorScheme = scheme
     ColorSchemeManager.shared.colorScheme = scheme
   }
+}
+
+private extension Color {
+  var uiColor: UIColor {
+    UIColor(self)
+  }
+}
+
+struct DevCredRepresentable: UIViewControllerRepresentable {
+  typealias UIViewControllerType = UIViewController
+
+  private let config: DevCredConfig
+
+  init(config: DevCredConfig) {
+    self.config = config
+  }
+
+  func makeUIViewController(context: Context) -> UIViewController {
+    let controller = DevCredRootView.build(config)
+    return UINavigationController(rootViewController: controller)
+  }
+
+  func updateUIViewController(_ uiViewController: UIViewController, context: Context) { }
 }
