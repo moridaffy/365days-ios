@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Simple package for displaying credits to developer inside your app</h4>
+<h4 align="center">Simple app and widget to track your year progress</h4>
 
 <h1 align="center">
 <img src="https://raw.githubusercontent.com/moridaffy/365days-ios/master/screenshot_app.png" width="250"> <img src="https://raw.githubusercontent.com/moridaffy/365days-ios/master/screenshot_widget.png" width="250">
