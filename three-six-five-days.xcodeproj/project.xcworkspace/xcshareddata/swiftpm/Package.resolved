@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/moridaffy/devcred-ios",
       "state" : {
-        "branch" : "main",
-        "revision" : "dbdbe087ab78ab64e6166b54f07e49038c83faf4"
+        "revision" : "dbdbe087ab78ab64e6166b54f07e49038c83faf4",
+        "version" : "1.0.1"
       }
     },
     {
