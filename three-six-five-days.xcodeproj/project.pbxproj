@@ -44,6 +44,11 @@
 		0C78334B28035D1F008DFF55 /* View+Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C78334928035CD6008DFF55 /* View+Widget.swift */; };
 		0C8AF987282AA7220002770E /* DevCred in Frameworks */ = {isa = PBXBuildFile; productRef = 0C8AF986282AA7220002770E /* DevCred */; };
 		0C8AF98A282AA74D0002770E /* ConstantHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C8AF989282AA74D0002770E /* ConstantHelper.swift */; };
+		0CBEAD002A75582F009A1DFC /* DayDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */; };
+		0CBEAD022A755902009A1DFC /* DayDisplayModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD012A755902009A1DFC /* DayDisplayModeView.swift */; };
+		0CBEAD042A755977009A1DFC /* DayDisplayModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */; };
+		0CBEAD052A755C9D009A1DFC /* DayDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */; };
+		0CBEAD062A755E23009A1DFC /* DayDisplayModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */; };
 		0CDBEC6228047E18002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
 		0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
 /* End PBXBuildFile section */
@@ -102,6 +107,9 @@
 		0C7833382803575B008DFF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C78334928035CD6008DFF55 /* View+Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Widget.swift"; sourceTree = "<group>"; };
 		0C8AF989282AA74D0002770E /* ConstantHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantHelper.swift; sourceTree = "<group>"; };
+		0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayMode.swift; sourceTree = "<group>"; };
+		0CBEAD012A755902009A1DFC /* DayDisplayModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayModeView.swift; sourceTree = "<group>"; };
+		0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayModeManager.swift; sourceTree = "<group>"; };
 		0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				0C6018DD2815DE87009AB28A /* ColorSchemeManager.swift */,
+				0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */,
 				0C1B19C52811E86300300A18 /* SettingsManager.swift */,
 			);
 			path = Managers;
@@ -190,6 +199,7 @@
 				0C2A469727FCAF4300E18E29 /* DotsView.swift */,
 				0C2A46A027FCBD4B00E18E29 /* DotView.swift */,
 				0C1B19C22811E5DA00300A18 /* ColorSchemeView.swift */,
+				0CBEAD012A755902009A1DFC /* DayDisplayModeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -210,6 +220,7 @@
 			children = (
 				0C2A46A327FCC09F00E18E29 /* CounterMode.swift */,
 				0C1B19C02811E4EA00300A18 /* ColorScheme.swift */,
+				0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,8 +371,11 @@
 				0C78334A28035CD6008DFF55 /* View+Widget.swift in Sources */,
 				0C8AF98A282AA74D0002770E /* ConstantHelper.swift in Sources */,
 				0C2A46A427FCC09F00E18E29 /* CounterMode.swift in Sources */,
+				0CBEAD022A755902009A1DFC /* DayDisplayModeView.swift in Sources */,
 				0C2A469827FCAF4300E18E29 /* DotsView.swift in Sources */,
+				0CBEAD002A75582F009A1DFC /* DayDisplayMode.swift in Sources */,
 				0C1B19C32811E5DA00300A18 /* ColorSchemeView.swift in Sources */,
+				0CBEAD042A755977009A1DFC /* DayDisplayModeManager.swift in Sources */,
 				0C2A468527FC982200E18E29 /* three_six_five_daysApp.swift in Sources */,
 				0C1B19C12811E4EA00300A18 /* ColorScheme.swift in Sources */,
 				0C2A469B27FCAFF800E18E29 /* Date+Helpers.swift in Sources */,
@@ -379,10 +393,12 @@
 				0C783347280359A1008DFF55 /* Int+Formatting.swift in Sources */,
 				0C783348280359A5008DFF55 /* Date+Helpers.swift in Sources */,
 				0C7833392803575B008DFF55 /* three_six_five_widget.intentdefinition in Sources */,
+				0CBEAD052A755C9D009A1DFC /* DayDisplayMode.swift in Sources */,
 				0C78334428035890008DFF55 /* DotsView.swift in Sources */,
 				0C78334528035892008DFF55 /* DotView.swift in Sources */,
 				0C6018E12815DFE7009AB28A /* ColorSchemeManager.swift in Sources */,
 				0C7833462803589D008DFF55 /* Color+CustomColors.swift in Sources */,
+				0CBEAD062A755E23009A1DFC /* DayDisplayModeManager.swift in Sources */,
 				0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */,
 				0C6018E32815E00D009AB28A /* ColorScheme.swift in Sources */,
 				0C7833342803575A008DFF55 /* three_six_five_widget.swift in Sources */,

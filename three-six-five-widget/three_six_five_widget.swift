@@ -58,7 +58,12 @@ struct MediumWidgetView: View {
         }
         .frame(width: viewWidth * 0.7)
 
-        VerticalCounterView(mode: entry.mode, date: entry.date)
+        VerticalCounterView(
+          config: .init(
+            date: entry.date,
+            dayDisplayMode: DayDisplayModeManager.shared.dayDisplayMode
+          )
+        )
           .frame(width: viewWidth * 0.3)
       }
       .padding(counterPadding)

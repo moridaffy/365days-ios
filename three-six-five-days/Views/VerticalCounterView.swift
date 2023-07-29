@@ -9,18 +9,17 @@ import SwiftUI
 
 struct VerticalCounterView: View {
   // TODO: adapt VerticalCounterView to work with different modes
-  private let mode: CounterMode
-  private let date: Date
+  private let config: VerticalCounterConfig
 
-  private let colorScheme = ColorSchemeManager.shared.colorScheme
-
-  init(mode: CounterMode, date: Date) {
-    self.mode = mode
-    self.date = date
+  init(config: VerticalCounterConfig) {
+    self.config = config
   }
 
   var body: some View {
-    VStack {
+    let date = config.date
+    let colorScheme = config.colorScheme
+
+    return VStack {
       Text(date.year.string)
         .font(.system(size: 20.0, weight: .bold))
         .foregroundColor(colorScheme.accentColor)
@@ -29,9 +28,30 @@ struct VerticalCounterView: View {
         .font(.system(size: 16.0, weight: .semibold))
         .foregroundColor(colorScheme.percentColor)
 
-      Text(date.dayInYear.string + "/" + date.totalDaysInYear.string)
+      Text(config.dayDisplayMode.title(for: date))
         .font(.system(size: 16.0, weight: .semibold))
         .foregroundColor(colorScheme.dayColor)
     }
+  }
+}
+
+struct VerticalCounterConfig {
+  let date: Date
+
+  let counterMode: CounterMode
+  let dayDisplayMode: DayDisplayMode
+
+  let colorScheme: ColorScheme
+
+  init(
+    date: Date,
+    counterMode: CounterMode = .year,
+    dayDisplayMode: DayDisplayMode,
+    colorScheme: ColorScheme = ColorSchemeManager.shared.colorScheme
+  ) {
+    self.date = date
+    self.counterMode = counterMode
+    self.dayDisplayMode = dayDisplayMode
+    self.colorScheme = colorScheme
   }
 }

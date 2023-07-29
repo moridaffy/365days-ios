@@ -12,11 +12,13 @@ import DevCred
 struct SettingsView: View {
 
   @State private var selectedColorScheme: ColorScheme
+  @State private var selectedDayDisplayMode: DayDisplayMode
 
   @State private var devCredPresented = false
 
   init() {
     selectedColorScheme = ColorSchemeManager.shared.colorScheme
+    selectedDayDisplayMode = DayDisplayModeManager.shared.dayDisplayMode
   }
   
   var body: some View {
@@ -24,21 +26,24 @@ struct SettingsView: View {
     UITableView.appearance().backgroundColor = .clear
 
     return VStack(spacing: .zero) {
-      HStack {
-        Text("Select color scheme")
-          .foregroundColor(.primary)
-          .font(.system(size: 17.0, weight: .semibold))
-        Spacer()
-      }
-      .padding(.horizontal, 20.0)
-
-      List(0..<ColorScheme.allCases.count) { index in
-        let scheme = ColorScheme.allCases[index]
-
-        ColorSchemeView(scheme: scheme, isSelected: scheme == selectedColorScheme)
-          .onTapGesture {
-            didSelectColorScheme(scheme)
+      List {
+        Section(header: Text("Color scheme")) {
+          ForEach(ColorScheme.allCases) { scheme in
+            ColorSchemeView(scheme: scheme, isSelected: scheme == selectedColorScheme)
+              .onTapGesture {
+                didSelectColorScheme(scheme)
+              }
           }
+        }
+
+        Section(header: Text("Day display mode")) {
+          ForEach(DayDisplayMode.allCases) { mode in
+            DayDisplayModeView(mode: mode, isSelected: mode == selectedDayDisplayMode)
+              .onTapGesture {
+                didSelectDayDisplayMode(mode)
+              }
+          }
+        }
       }
     }
     .toolbar {
@@ -68,11 +73,12 @@ struct SettingsView: View {
     selectedColorScheme = scheme
     ColorSchemeManager.shared.colorScheme = scheme
   }
-}
 
-private extension Color {
-  var uiColor: UIColor {
-    UIColor(self)
+  private func didSelectDayDisplayMode(_ mode: DayDisplayMode) {
+    guard selectedDayDisplayMode != mode else { return }
+
+    selectedDayDisplayMode = mode
+    DayDisplayModeManager.shared.dayDisplayMode = mode
   }
 }
 

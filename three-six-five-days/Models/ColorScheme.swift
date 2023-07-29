@@ -5,6 +5,7 @@
 //  Created by Maxim Skryabin on 21.04.2022.
 //
 
+import Foundation
 import SwiftUI
 
 enum ColorScheme: String, CaseIterable {
@@ -18,12 +19,16 @@ enum ColorScheme: String, CaseIterable {
     switch self {
     case .standard:
       return "Standard"
+
     case .herbal:
       return "Herbal"
+
     case .pinky:
       return "Pinky"
+
     case .ocean:
       return "Ocean"
+
     case .fancy:
       return "Fancy"
     }
@@ -33,6 +38,7 @@ enum ColorScheme: String, CaseIterable {
     switch self {
     case .standard:
       return .customTurquoise
+
     default:
       return Color("\(title)Day")
     }
@@ -42,6 +48,7 @@ enum ColorScheme: String, CaseIterable {
     switch self {
     case .standard:
       return .customGreen
+
     default:
       return Color("\(title)Percent")
     }
@@ -51,8 +58,15 @@ enum ColorScheme: String, CaseIterable {
     switch self {
     case .standard:
       return .customPink
+      
     default:
       return Color("\(title)Accent")
     }
+  }
+}
+
+extension ColorScheme: Identifiable {
+  var id: Self {
+    self
   }
 }

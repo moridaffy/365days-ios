@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 extension Color {
   static var customBackground: Color {
@@ -22,5 +23,11 @@ extension Color {
 
   static var customGreen: Color {
     Color("green")
+  }
+}
+
+extension Color {
+  var uiColor: UIColor {
+    UIColor(self)
   }
 }

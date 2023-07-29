@@ -32,6 +32,7 @@ class SettingsManager {
 extension SettingsManager {
   enum Keys: String {
     case colorScheme
+    case dayDisplayMode
 
     var key: String {
       return [

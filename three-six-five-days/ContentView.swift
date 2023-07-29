@@ -35,7 +35,12 @@ struct ContentView: View {
           }
             .frame(width: viewWidth * 0.7)
 
-          VerticalCounterView(mode: mode, date: date)
+          VerticalCounterView(
+            config: .init(
+              date: date,
+              dayDisplayMode: DayDisplayModeManager.shared.dayDisplayMode
+            )
+          )
             .frame(width: viewWidth * 0.3)
         }
         .padding(counterPadding)
