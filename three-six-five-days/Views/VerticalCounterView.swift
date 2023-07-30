@@ -9,9 +9,9 @@ import SwiftUI
 
 struct VerticalCounterView: View {
   // TODO: adapt VerticalCounterView to work with different modes
-  private let config: VerticalCounterConfig
+  private let config: CounterConfig
 
-  init(config: VerticalCounterConfig) {
+  init(config: CounterConfig) {
     self.config = config
   }
 
@@ -32,26 +32,5 @@ struct VerticalCounterView: View {
         .font(.system(size: 16.0, weight: .semibold))
         .foregroundColor(colorScheme.dayColor)
     }
-  }
-}
-
-struct VerticalCounterConfig {
-  let date: Date
-
-  let counterMode: CounterMode
-  let dayDisplayMode: DayDisplayMode
-
-  let colorScheme: ColorScheme
-
-  init(
-    date: Date,
-    counterMode: CounterMode = .year,
-    dayDisplayMode: DayDisplayMode,
-    colorScheme: ColorScheme = ColorSchemeManager.shared.colorScheme
-  ) {
-    self.date = date
-    self.counterMode = counterMode
-    self.dayDisplayMode = dayDisplayMode
-    self.colorScheme = colorScheme
   }
 }

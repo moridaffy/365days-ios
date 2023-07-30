@@ -49,6 +49,8 @@
 		0CBEAD042A755977009A1DFC /* DayDisplayModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */; };
 		0CBEAD052A755C9D009A1DFC /* DayDisplayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */; };
 		0CBEAD062A755E23009A1DFC /* DayDisplayModeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */; };
+		0CBEAD082A769349009A1DFC /* CounterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD072A769349009A1DFC /* CounterConfig.swift */; };
+		0CBEAD092A769366009A1DFC /* CounterConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBEAD072A769349009A1DFC /* CounterConfig.swift */; };
 		0CDBEC6228047E18002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
 		0CDBEC6328047E3D002DBBD6 /* HorizontalCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,7 @@
 		0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayMode.swift; sourceTree = "<group>"; };
 		0CBEAD012A755902009A1DFC /* DayDisplayModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayModeView.swift; sourceTree = "<group>"; };
 		0CBEAD032A755977009A1DFC /* DayDisplayModeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDisplayModeManager.swift; sourceTree = "<group>"; };
+		0CBEAD072A769349009A1DFC /* CounterConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterConfig.swift; sourceTree = "<group>"; };
 		0CDBEC6128047E18002DBBD6 /* HorizontalCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -219,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0C2A46A327FCC09F00E18E29 /* CounterMode.swift */,
+				0CBEAD072A769349009A1DFC /* CounterConfig.swift */,
 				0C1B19C02811E4EA00300A18 /* ColorScheme.swift */,
 				0CBEACFF2A75582F009A1DFC /* DayDisplayMode.swift */,
 			);
@@ -360,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CBEAD082A769349009A1DFC /* CounterConfig.swift in Sources */,
 				0C1B19C62811E86300300A18 /* SettingsManager.swift in Sources */,
 				0C2A469D27FCB65700E18E29 /* Int+Formatting.swift in Sources */,
 				0C2A46A127FCBD4B00E18E29 /* DotView.swift in Sources */,
@@ -393,6 +398,7 @@
 				0C783347280359A1008DFF55 /* Int+Formatting.swift in Sources */,
 				0C783348280359A5008DFF55 /* Date+Helpers.swift in Sources */,
 				0C7833392803575B008DFF55 /* three_six_five_widget.intentdefinition in Sources */,
+				0CBEAD092A769366009A1DFC /* CounterConfig.swift in Sources */,
 				0CBEAD052A755C9D009A1DFC /* DayDisplayMode.swift in Sources */,
 				0C78334428035890008DFF55 /* DotsView.swift in Sources */,
 				0C78334528035892008DFF55 /* DotView.swift in Sources */,

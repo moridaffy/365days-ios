@@ -28,6 +28,23 @@ enum DayDisplayMode: String, CaseIterable {
       return (date.totalDaysInYear - date.dayInYear).string
     }
   }
+
+  func preview(for date: Date) -> String {
+    var parts: [String] = [title(for: date)]
+
+    switch self {
+    case .currentOutOfTotal:
+      parts.append("(current day out of total days)")
+
+    case .current:
+      parts.append("(current day)")
+
+    case .left:
+      parts.append("(days left)")
+    }
+
+    return parts.joined(separator: " ")
+  }
 }
 
 extension DayDisplayMode: Identifiable {

@@ -20,7 +20,7 @@ struct DayDisplayModeView: View {
 
   var body: some View {
     HStack {
-      Text(mode.title(for: Date()))
+      Text(mode.preview(for: Date()))
         .font(.system(size: 16.0, weight: .regular))
         .foregroundColor(.white)
 
